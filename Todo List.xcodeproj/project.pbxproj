@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		01901B5C2250D41F009B316F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01901B5B2250D41F009B316F /* AppDelegate.swift */; };
-		01901B5E2250D41F009B316F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01901B5D2250D41F009B316F /* ViewController.swift */; };
 		01901B612250D41F009B316F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01901B5F2250D41F009B316F /* Main.storyboard */; };
 		01901B642250D41F009B316F /* Todo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01901B622250D41F009B316F /* Todo_List.xcdatamodeld */; };
 		01901B662250D429009B316F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01901B652250D429009B316F /* Assets.xcassets */; };
 		01901B692250D429009B316F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01901B672250D429009B316F /* LaunchScreen.storyboard */; };
+		01901B712250EDBD009B316F /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01901B702250EDBD009B316F /* ToDo.swift */; };
+		01901B732250EEAB009B316F /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01901B722250EEAB009B316F /* ToDoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01901B582250D41F009B316F /* Todo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01901B5B2250D41F009B316F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01901B5D2250D41F009B316F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01901B602250D41F009B316F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01901B632250D41F009B316F /* Todo_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo_List.xcdatamodel; sourceTree = "<group>"; };
 		01901B652250D429009B316F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01901B682250D429009B316F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01901B6A2250D429009B316F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01901B702250EDBD009B316F /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		01901B722250EEAB009B316F /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				01901B5B2250D41F009B316F /* AppDelegate.swift */,
-				01901B5D2250D41F009B316F /* ViewController.swift */,
 				01901B5F2250D41F009B316F /* Main.storyboard */,
+				01901B722250EEAB009B316F /* ToDoTableViewController.swift */,
+				01901B702250EDBD009B316F /* ToDo.swift */,
 				01901B652250D429009B316F /* Assets.xcassets */,
 				01901B672250D429009B316F /* LaunchScreen.storyboard */,
 				01901B6A2250D429009B316F /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01901B5E2250D41F009B316F /* ViewController.swift in Sources */,
+				01901B712250EDBD009B316F /* ToDo.swift in Sources */,
+				01901B732250EEAB009B316F /* ToDoTableViewController.swift in Sources */,
 				01901B642250D41F009B316F /* Todo_List.xcdatamodeld in Sources */,
 				01901B5C2250D41F009B316F /* AppDelegate.swift in Sources */,
 			);
