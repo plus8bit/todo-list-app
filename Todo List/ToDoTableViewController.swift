@@ -36,7 +36,16 @@ class ToDoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = toDos[indexPath.row].name
+        
+        let currentToDo = toDos[indexPath.row]
+        
+        if currentToDo.important {
+            // !
+            cell.textLabel?.text = "🚀 " + currentToDo.name
+        } else {
+            // Normal
+            cell.textLabel?.text = currentToDo.name
+        }
 
         return cell
     }
