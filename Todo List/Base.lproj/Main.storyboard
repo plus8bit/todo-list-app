@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X52-Gb-8xa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X52-Gb-8xa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="174" y="-8"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Todo View Controller-->
         <scene sceneID="ehr-ix-6DI">
             <objects>
-                <viewController id="CVo-Qd-oZW" sceneMemberID="viewController">
+                <viewController id="CVo-Qd-oZW" customClass="CreateTodoViewController" customModule="Todo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zwz-Qv-haa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTodo:" destination="CVo-Qd-oZW" eventType="touchUpInside" id="4Sq-Iz-R0T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,6 +105,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Hi-xw-0Uu"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="7ne-f7-3c5" id="d5L-b4-gMb"/>
+                        <outlet property="nameTextField" destination="T9T-NC-9iN" id="ES5-wm-TpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlt-Bh-ros" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
