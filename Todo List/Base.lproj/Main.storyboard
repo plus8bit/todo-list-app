@@ -41,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="bAj-4s-wHd" kind="show" identifier="moveToComplete" id="ACc-mi-xvU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEn-M6-fhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +72,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVn-9a-UCJ">
                                 <rect key="frame" x="131" y="198.5" width="113" height="35"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.10397958010435104" green="0.28911370038986206" blue="0.9848368763923645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-f7-3c5">
@@ -113,6 +116,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlt-Bh-ros" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885.60000000000002" y="-9.4452773613193415"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="Wne-kf-gbQ">
+            <objects>
+                <viewController id="bAj-4s-wHd" customClass="CompleteViewController" customModule="Todo_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pts-IM-Qn1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-Ot-4ds">
+                                <rect key="frame" x="20" y="94" width="335" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.10397958010435104" green="0.28911370038986206" blue="0.9848368763923645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-5w-HL8">
+                                <rect key="frame" x="107" y="158.5" width="161" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
+                                <state key="normal" title="Complete">
+                                    <color key="titleColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeButton:" destination="bAj-4s-wHd" eventType="touchUpInside" id="8ht-fM-N0M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LWo-5w-HL8" firstAttribute="top" secondItem="ksf-Ot-4ds" secondAttribute="bottom" constant="30" id="1t2-K6-7YE"/>
+                            <constraint firstItem="LWo-5w-HL8" firstAttribute="centerX" secondItem="pts-IM-Qn1" secondAttribute="centerX" id="83R-RK-YrB"/>
+                            <constraint firstItem="ksf-Ot-4ds" firstAttribute="top" secondItem="7Ak-nv-kI8" secondAttribute="top" constant="30" id="E8f-Vx-jbb"/>
+                            <constraint firstItem="ksf-Ot-4ds" firstAttribute="leading" secondItem="7Ak-nv-kI8" secondAttribute="leading" constant="20" id="rsv-dm-V5G"/>
+                            <constraint firstItem="7Ak-nv-kI8" firstAttribute="trailing" secondItem="ksf-Ot-4ds" secondAttribute="trailing" constant="20" id="wUl-88-gKH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Ak-nv-kI8"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="ksf-Ot-4ds" id="lT9-63-NEq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCy-Fr-4sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NO1-qx-ewh">

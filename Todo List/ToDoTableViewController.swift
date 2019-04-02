@@ -15,15 +15,7 @@ class ToDoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let todo1 = ToDo()
-        todo1.name = "Walk the dog"
-        todo1.important = true
-        
-        let todo2 = ToDo()
-        todo2.name = "Buy cookies"
-        todo2.important = false
-        
-        toDos = [todo1, todo2]
+         
         
     }
 
@@ -50,9 +42,21 @@ class ToDoTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectdToDo = toDos[indexPath.row]
+        performSegue(withIdentifier: "moveToComplete", sender: selectdToDo)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let createVC = segue.destination as? CreateTodoViewController {
             createVC.toDoTableVC = self
+        }
+        
+        if let completeVC = segue.destination as? CompleteViewController {
+            if let selectedToDo = sender as? ToDo {
+                completeVC.todo = selectedToDo
+                
+            }
         }
     }
 
